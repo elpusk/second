@@ -1,0 +1,34 @@
+
+///////////////////////////////
+build configuration
+///////////////////////////////
+
+2010. 9. 28
+
+* library project 의 경우
+
+1. 출력디렉토리
+Debug - win32 : C:\second\library\windows\lib\x86\debug\
+Release - win32 : C:\second\library\windows\lib\x86\
+Debug - x64 : C:\second\library\windows\lib\x64\debug\
+Release - x64 : C:\second\library\windows\lib\x64\
+
+2. 추가 포함 디렉토리
+모든 구성 - 모든 플랫폼 : C:\second\library\windows\inc\
+$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;C:\WinDDK\7600.16385.0\inc\api\;C:\WinDDK\7600.16385.0\inc\ddk\;C:\second\library\windows\inc\
+
+3. 추가 라이브러이 디렉토리
+Debug - win32 : C:\second\library\windows\lib\x86\debug\
+Release - win32 : C:\second\library\windows\lib\x86\
+Debug - x64 : C:\second\library\windows\lib\x64\debug\
+Release - x64 : C:\second\library\windows\lib\x64\
+
+4. 타겟 최소 버전
+#include <winsdkver.h>
+#define	_WIN32_WINNT		0x0601		//windows 7
+
+
+C:\second\library\windows\inc\;C:\WinDDK\7600.16385.0\inc\api;C:\WinDDK\7600.16385.0\inc\ddk
+
+
+

@@ -1,0 +1,1 @@
+for  Visual Studio 2010. static linked library

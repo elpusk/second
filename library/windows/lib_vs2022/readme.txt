@@ -1,0 +1,1 @@
+for  Visual Studio 2022. static linked library
