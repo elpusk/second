@@ -225,11 +225,18 @@ INT Cns_Hidusb::Find(
 		if( m_bNoNeedDevCap ){
 			Attributes.VendorID = GetVidOnDevicePath( pDetailData->DevicePath );
 			Attributes.ProductID = GetPidOnDevicePath( pDetailData->DevicePath );
+			Attributes.VersionNumber = 0;//
 		}
 		else{
 			lResult = HidD_GetAttributes(hHid,&Attributes);
-			if( lResult == FALSE )
-				break;//exit for
+			if (lResult == FALSE) {
+				//break;//exit for
+				CloseHandle(hHid);
+
+				//Free the memory used by the detailData structure (no longer needed).
+				free(pDetailData);
+				continue;//next item
+			}
 		}
 		
 		//5.
