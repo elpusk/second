@@ -41,7 +41,7 @@ public:
 	//this function is called on WM_DEVICECHANGE message handler
 	static ENUM_DevEvent OnDeviceChangeMsgHandler(
 		UINT nEventType,
-		DWORD dwData,
+		LPARAM dwData,
 		CONST GUID & ClassGuid,
 		INT nVID,
 		INT nPID,
@@ -52,7 +52,7 @@ public:
 
 	static ENUM_DevEvent OnDeviceChangeMsgHandler( 
 		UINT nEventType,
-		DWORD dwData,
+		LPARAM dwData,
 		INT nDev,
 		CONST GUID & ClassGuid,
 		CONST INT *pnVID,
@@ -63,7 +63,7 @@ public:
 
 	static ENUM_DevEvent OnDeviceChangeMsgHandler(
 		UINT nEventType,
-		DWORD dwData,
+		LPARAM dwData,
 		std::vector<ng_DEVH_UsbId> & vectorUsbId,
 		std::vector<HANDLE> & vectorhDev,
 		INT & nIndexVectorhDev,

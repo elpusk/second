@@ -9,7 +9,7 @@
 //this function is called on WM_DEVICECHANGE message handler
 Cns_DevHelper::ENUM_DevEvent Cns_DevHelper::OnDeviceChangeMsgHandler(
 	UINT nEventType,
-	DWORD dwData,
+	LPARAM dwData,
 	CONST GUID & ClassGuid,
 	INT nVID,
 	INT nPID/*=1*/,
@@ -80,7 +80,7 @@ Cns_DevHelper::ENUM_DevEvent Cns_DevHelper::OnDeviceChangeMsgHandler(
 
 Cns_DevHelper::ENUM_DevEvent Cns_DevHelper::OnDeviceChangeMsgHandler( 
 	UINT nEventType,
-	DWORD dwData,
+	LPARAM dwData,
 	INT nDev,
 	CONST GUID & ClassGuid,
 	CONST INT *pnVID,
@@ -207,7 +207,7 @@ Cns_DevHelper::ENUM_DevEvent Cns_DevHelper::OnDeviceChangeMsgHandler(
 
 Cns_DevHelper::ENUM_DevEvent Cns_DevHelper::OnDeviceChangeMsgHandler(
 	UINT nEventType,
-	DWORD dwData,
+	LPARAM dwData,
 	std::vector<ng_DEVH_UsbId> & vectorUsbId,
 	std::vector<HANDLE> & vectorhDev,
 	INT & nIndexVectorhDev,
